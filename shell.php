@@ -68,7 +68,7 @@ function loadDoc() {
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
 
-     document.getElementById('results').value = document.getElementById('results').value+"\n\n"+"FUNCTION: exec"+"\n"+"CMD: ls"+"\n\n"+xhttp.responseText;
+     document.getElementById('results').value = document.getElementById('results').value+"\n\n"+"FUNCTION: "+document.getElementById('function').value+"\n"+"CMD: "+document.getElementById('cmd').value+"\n\n"+xhttp.responseText;
      document.getElementById('results').scrollTop = document.getElementById('results').scrollHeight;
     }
   };
